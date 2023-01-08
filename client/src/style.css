@@ -4,14 +4,15 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: "Poppins", sans-serif;
+  margin: 0;
 }
 
 html {
   background: linear-gradient(
     to left bottom,
-    rgb(133, 231, 255),
-    rgb(163, 255, 255) 40%,
-    rgb(209, 255, 255) 70%
+    rgb(179, 239, 254),
+    rgb(218, 255, 255) 40%,
+    rgb(232, 255, 255) 70%
   );
 }
 
@@ -23,72 +24,88 @@ html {
 h1 {
   font-size: 4em;
   font-weight: bold;
-  color: #07073d;
+  color: #0b7560;
   border-bottom: 0.5rem solid;
   width: max-content;
   margin: 1em auto;
 }
 
+
+
 .books {
   padding: 0 3rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 16px;
 }
 
 .book {
+  height: 37rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(to right bottom, #6ed3d3, #96e1e1);
-  border: 1px solid #07073d;
+  background: linear-gradient(160deg, rgb(0, 240, 240) 25%, white);
   border-radius: 15px;
-  box-shadow: 10px 10px 20px -1px #07073d;
+  box-shadow: 10px 10px 15px -1px #0f5578;
+  overflow: hidden;
 }
 
-.book h2 {
-  height: 48px;
+img {
+  height: 380px;
+  width: 100%;
+  object-fit: cover;
+  background-color: rgb(14, 222, 191);
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 1rem;
+}
+
+.book-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.book h3 {
+  height: 3.5rem;
+  width: 100%;
 }
 
 .book p {
   text-align: start;
-  height: 8rem;
-  width: 280px;
-  white-space: wrap;
-  overflow: hidden;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+  white-space: pre-wrap;
   text-overflow: ellipsis;
-  margin-top: 24px;
 }
 
 .book span {
-  margin: 4px auto;
+  height: 1.5rem;
 }
 
-img {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  background-color: rgb(14, 222, 191);
+.book-footer {
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 1rem;
 }
 
-.delete {
+.button {
   border: none;
-  padding: 4px 10px;
-  background-color: rgb(209, 57, 57);
+  padding: 8px 16px;
+  font-size: 1rem;
   color: white;
   border-radius: 3px;
   cursor: pointer;
-  margin-top: 4px;
+}
+
+.delete {
+  background-color: rgb(209, 57, 57);
 }
 
 .update {
-  border: none;
-  padding: 4px 8px;
   background-color: rgb(146, 78, 189);
-  border-radius: 3px;
-  cursor: pointer;
-  margin: 4px 0;
 }
 
 .update a {

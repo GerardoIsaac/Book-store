@@ -30,10 +30,10 @@ app.get("/books", (req, res) => {
 })
 
 app.post("/books", (req, res) => {
-    const q = "INSERT INTO books (`title`, `desc`, `price`, `cover`) VALUES (?)"
+    const q = "INSERT INTO books (`title`, `author`, `price`, `cover`) VALUES (?)"
     const values = [
         req.body.title,
-        req.body.desc,
+        req.body.author,
         req.body.price,
         req.body.cover,
     ]
@@ -56,11 +56,11 @@ app.delete("/books/:id", (req, res) => {
 
 app.put("/books/:id", (req, res) => {
     const bookId = req.params.id
-    const q = "UPDATE books SET `title` = ?, `desc` = ?, `price` = ?, `cover` = ? WHERE id = ?"
+    const q = "UPDATE books SET `title` = ?, `author` = ?, `price` = ?, `cover` = ? WHERE id = ?"
 
     const values = [
         req.body.title,
-        req.body.desc,
+        req.body.author,
         req.body.price,
         req.body.cover,
     ]

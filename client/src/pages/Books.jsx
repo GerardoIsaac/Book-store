@@ -29,28 +29,32 @@ const Books = () => {
   };
 
   return (
-    <div>
+    <>
       <h1>Book Shop</h1>
       <div className="books">
         {books.map((book) => (
           <div className="book" key={book.id}>
             {book.cover && <img src={book.cover} alt="" />}
-            <h2>{book.title}</h2>
-            <p>{book.desc}</p>
-            <span>$ {book.price}</span>
-            <button className="delete" onClick={() => handleDelete(book.id)}>
-              Delete
-            </button>
-            <button className="update">
-              <Link to={`/update/${book.id}`}>Update</Link>
-            </button>
+            <div className="book-container">
+              <h3>{book.title}</h3>
+              <p>{book.author}</p>
+              <span>$ {book.price}</span>
+            </div>
+            <div className="book-footer">
+              <button className="button delete" onClick={() => handleDelete(book.id)}>
+                Delete
+              </button>
+              <button className="button update">
+                <Link to={`/update/${book.id}`}>Update</Link>
+              </button>
+            </div>
           </div>
         ))}
       </div>
       <button className="add">
         <Link to="/add">Add new book</Link>
       </button>
-    </div>
+    </>
   );
 };
 
