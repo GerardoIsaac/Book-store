@@ -1,82 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  background: linear-gradient(
+    to left bottom,
+    rgb(133, 231, 255),
+    rgb(163, 255, 255) 40%,
+    rgb(209, 255, 255) 70%
+  );
+}
+
 .App {
-    height: 100vh;
-    padding: 0 100px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4em;
+  font-weight: bold;
+  color: #07073d;
+  border-bottom: 0.5rem solid;
+  width: max-content;
+  margin: 1em auto;
 }
 
 .books {
-    display: flex;
-    gap: 10px;
+  padding: 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
 }
 
 .book {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right bottom, #6ed3d3, #96e1e1);
+  border: 1px solid #07073d;
+  border-radius: 15px;
+  box-shadow: 10px 10px 20px -1px #07073d;
+}
+
+.book h2 {
+  height: 48px;
+}
+
+.book p {
+  text-align: start;
+  height: 8rem;
+  width: 280px;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 24px;
+}
+
+.book span {
+  margin: 4px auto;
 }
 
 img {
-    width: 200px;
-    height: 300px;
-    object-fit: cover;
-    background-color: rgb(203, 238, 227);
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  background-color: rgb(14, 222, 191);
 }
 
 .delete {
-    border: none;
-    padding: 3px 6px;
-    background-color: white;
-    cursor: pointer;
-    border: 1px solid rgb(245, 191, 191);
-    color: rgb(242, 100, 100);
+  border: none;
+  padding: 4px 10px;
+  background-color: rgb(209, 57, 57);
+  color: white;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 4px;
 }
 
 .update {
-    border: none;
-    padding: 3px 6px;
-    background-color: white;
-    cursor: pointer;
-    border: 1px solid rgb(204, 204, 234);
-    color: rgb(139, 139, 234);
+  border: none;
+  padding: 4px 8px;
+  background-color: rgb(146, 78, 189);
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 4px 0;
+}
+
+.update a {
+  color: white;
 }
 
 .add {
-    margin: 25px 0;
-    border: none;
-    padding: 3px 6px;
-    background-color: white;
-    cursor: pointer;
-    border: 1px solid rgb(161, 244, 232);
+  margin: 25px 0;
+  border: none;
+  padding: 5px 10px;
+  background-color: rgb(13, 90, 78);
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 .add a {
-    color: rgb(14, 222, 191);
-    text-decoration: none;
-    font-size: 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
 }
 
 .form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 input {
-    width: 250px;
-    padding: 10px;
-    border: 1px solid gray;
+  width: 250px;
+  padding: 10px;
+  border: 1px solid gray;
 }
 
 .formButton {
-    border: none;
-    padding: 10px;
-    background-color: rgb(244, 142, 74);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
+  border: none;
+  padding: 10px;
+  background-color: rgb(244, 142, 74);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
