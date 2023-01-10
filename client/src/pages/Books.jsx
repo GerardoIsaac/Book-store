@@ -30,7 +30,7 @@ const Books = () => {
 
   return (
     <>
-      <h1>Book Shop</h1>
+      <h1>Bookstore</h1>
       <div className="books">
         {books.map((book) => (
           <div className="book" key={book.id}>

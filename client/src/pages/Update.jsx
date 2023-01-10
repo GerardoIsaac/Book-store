@@ -31,14 +31,16 @@ const Update = () => {
   }
 
   return (
+    <>
+      <h2>Update the Book</h2>
     <div className='form'>
-      <h1>Update the Book</h1>
       <input type="text" placeholder='title' onChange={handleChange} name='title' />
       <input type="text" placeholder='author' onChange={handleChange} name='author' />
       <input type="number" placeholder='price' onChange={handleChange} name='price' />
       <input type="text" placeholder='cover' onChange={handleChange} name='cover' />
       <button className='formButton' onClick={handleClick}>Update</button>
     </div>
+    </>
   )
 }
 

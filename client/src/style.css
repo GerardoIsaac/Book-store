@@ -2,7 +2,6 @@
 
 * {
   box-sizing: border-box;
-  text-decoration: none;
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
@@ -16,48 +15,65 @@ html {
   );
 }
 
+h1 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #006c63;
+  border-bottom: 0.3rem solid;
+  width: max-content;
+  margin: 1em auto;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: bold;
+  color: #006c63;
+  margin: 1em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
 .App {
   min-height: 100vh;
   text-align: center;
 }
 
-h1 {
-  font-size: 4em;
-  font-weight: bold;
-  color: #0b7560;
-  border-bottom: 0.5rem solid;
-  width: max-content;
-  margin: 1em auto;
-}
-
-
-
 .books {
-  padding: 0 3rem;
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 16px;
+  margin: 0 auto;
+  padding: 0 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+  max-width: 1600px;
 }
 
 .book {
-  height: 37rem;
+  width: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background: linear-gradient(160deg, rgb(0, 240, 240) 25%, white);
   border-radius: 15px;
   box-shadow: 10px 10px 15px -1px #0f5578;
   overflow: hidden;
+  background: linear-gradient(160deg, rgb(0, 240, 240) 25%, white);
 }
 
-img {
-  height: 380px;
+.book img {
+  height: 450px;
   width: 100%;
   object-fit: cover;
   background-color: rgb(14, 222, 191);
-  border-radius: 0 0 20px 20px;
   margin-bottom: 1rem;
+  box-shadow: 0 0 20px #006c63;
 }
 
 .book-container {
@@ -76,8 +92,6 @@ img {
   text-align: start;
   height: 1.5rem;
   margin-bottom: 1rem;
-  white-space: pre-wrap;
-  text-overflow: ellipsis;
 }
 
 .book span {
@@ -87,12 +101,13 @@ img {
 .book-footer {
   width: 80%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   padding: 1rem;
 }
 
 .button {
   border: none;
+  outline: none;
   padding: 8px 16px;
   font-size: 1rem;
   color: white;
@@ -108,42 +123,40 @@ img {
   background-color: rgb(146, 78, 189);
 }
 
-.update a {
-  color: white;
-}
-
 .add {
-  margin: 25px 0;
+  margin: 3em 0;
   border: none;
-  padding: 5px 10px;
-  background-color: rgb(13, 90, 78);
+  padding: 0.5em 1em;
+  background-color: #006c63;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .add a {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .form {
+  margin-top: 8em;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
 
-input {
+.form input {
   width: 250px;
   padding: 10px;
   border: 1px solid gray;
+  border-radius: 5px;
 }
 
 .formButton {
   border: none;
   padding: 10px;
-  background-color: rgb(244, 142, 74);
-  color: white;
+  background-color: #f48e4a;
   font-weight: bold;
   cursor: pointer;
+  border-radius: 5px;
 }
